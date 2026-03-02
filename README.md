@@ -25,8 +25,8 @@ Disponible en: [https://lvazquezr98-dev.github.io](https://lvazquezr98-dev.githu
 
 ## 📞 Contacto
 
-- **Correo**: tu.correo@gmail.com
-- **LinkedIn**: https://www.linkedin.com/in/tu-linkedin/
+- **Correo**: lvazquezr98@gmail.com
+- **LinkedIn**: www.linkedin.com/in/luis-alberto-vazquez-reyes
 - **GitHub**: https://github.com/lvazquezr98-dev
 
 ---
