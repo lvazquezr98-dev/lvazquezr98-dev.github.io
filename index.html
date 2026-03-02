@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Reyes - Portafolio de Desarrollo Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__logo">Luis Reyes</div>
+            <ul class="navbar__menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Portada) -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Hola, soy Luis Reyes</h1>
+                <p class="hero__subtitle">Desarrollador Web Full Stack | Especialista en HTML, CSS y JavaScript</p>
+                <p class="hero__description">Transformo ideas en soluciones web interactivas y funcionales</p>
+                <a href="#proyectos" class="btn btn--primary">Ver mis proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <h2 class="section__title">Sobre mí</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>Soy un desarrollador web apasionado por crear experiencias interactivas y funcionales. Con formación en el bootcamp de TripleTen, he adquirido una sólida base en desarrollo frontend y backend.</p>
+                    <p>Me especializo en:</p>
+                    <ul class="about__skills">
+                        <li>✓ HTML5 semántico y accesible</li>
+                        <li>✓ CSS3 moderno con metodología BEM</li>
+                        <li>✓ JavaScript ES6+ y Programación Orientada a Objetos</li>
+                        <li>✓ Integración con APIs REST</li>
+                        <li>✓ Diseño responsivo y mobile-first</li>
+                        <li>✓ Gestión de versiones con Git y GitHub</li>
+                    </ul>
+                    <p>Tengo un gran interés en aprender nuevas tecnologías y enfrentar desafíos que me permitan crecer como profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PROYECTOS -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section__title">Proyectos Destacados</h2>
+            <div class="projects__grid">
+                
+                <!-- PROYECTO 1: Around The U.S. -->
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <img src="images/project1-thumb.png" alt="Around The U.S." class="project-card__image">
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Around The U.S.</h3>
+                        <p class="project-card__context">
+                            <strong>Contexto:</strong> Aplicación web interactiva desarrollada durante el bootcamp de TripleTen (Sprints 8-12). El proyecto evolucionó desde una galería estática a una aplicación completa con integración de API.
+                        </p>
+                        <p class="project-card__description">
+                            <strong>Descripción:</strong> Plataforma que permite a usuarios gestionar su perfil y compartir fotos de lugares alrededor de los Estados Unidos. Los usuarios pueden editar su información, agregar nuevas fotos, dar "me gusta" y eliminar tarjetas.
+                        </p>
+                        <div class="project-card__analysis">
+                            <strong>Análisis y aprendizajes:</strong>
+                            <ul>
+                                <li>Implementé validación de formularios HTML5 con manejo avanzado de errores</li>
+                                <li>Refactoricé el código aplicando Programación Orientada a Objetos (POO) con clases reutilizables</li>
+                                <li>Integré peticiones Fetch API para conectar con un servidor backend</li>
+                                <li>Manejé el ciclo de vida de componentes y estado de la aplicación</li>
+                                <li>Creé módulos ES6 para mejor organización del código</li>
+                            </ul>
+                        </div>
+                        <div class="project-card__tech">
+                            <strong>Tecnologías:</strong>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3 (BEM)</span>
+                            <span class="tech-tag">JavaScript ES6+</span>
+                            <span class="tech-tag">Fetch API</span>
+                            <span class="tech-tag">POO</span>
+                        </div>
+                        <div class="project-card__conclusions">
+                            <strong>Conclusiones:</strong> Este proyecto fue fundamental para entender la importancia de la arquitectura de código y cómo estructurar aplicaciones escalables. La progresión de 4 sprints me permitió ver cómo una aplicación puede mejorarse iterativamente.
+                        </div>
+                        <div class="project-card__links">
+                            <a href="https://github.com/lvazquezr98-dev/web_project_around_es" class="btn btn--secondary" target="_blank">Ver en GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROYECTO 2: Cafetería Triple Peaks -->
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <img src="images/project2-thumb.png" alt="Cafetería Triple Peaks" class="project-card__image">
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Cafetería Triple Peaks</h3>
+                        <p class="project-card__context">
+                            <strong>Contexto:</strong> Proyecto de sitio web para una cafetería de especialidad. Desarrollado como parte de las prácticas de frontend durante el bootcamp, enfocándose en diseño responsivo y buenas prácticas HTML/CSS.
+                        </p>
+                        <p class="project-card__description">
+                            <strong>Descripción:</strong> Página web profesional para "Triple Peaks Coffee Shop" que incluye información de horarios, galería de recetas de café con videos instructivos, y un sistema de reserva de mesas con formulario interactivo.
+                        </p>
+                        <div class="project-card__analysis">
+                            <strong>Análisis y aprendizajes:</strong>
+                            <ul>
+                                <li>Diseñé una estructura HTML5 semántica y accesible</li>
+                                <li>Aplicué la metodología BEM para CSS organizado y mantenible</li>
+                                <li>Implementé Flexbox para layouts responsivos sin dependencias externas</li>
+                                <li>Integré videos de YouTube de forma embebida</li>
+                                <li>Creé formularios con validación básica HTML5</li>
+                                <li>Trabajé con Google Fonts para tipografía moderna</li>
+                            </ul>
+                        </div>
+                        <div class="project-card__tech">
+                            <strong>Tecnologías:</strong>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3 (BEM)</span>
+                            <span class="tech-tag">Flexbox</span>
+                            <span class="tech-tag">Google Fonts</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        <div class="project-card__conclusions">
+                            <strong>Conclusiones:</strong> Este proyecto me enseñó la importancia del CSS bien organizado y cómo crear interfaces atractivas sin JavaScript. Reforzó mi comprensión de diseño responsivo y accesibilidad web.
+                        </div>
+                        <div class="project-card__links">
+                            <a href="https://github.com/lvazquezr98-dev/web_project_coffeeshop" class="btn btn--secondary" target="_blank">Ver en GitHub</a>
+                            <a href="https://lvazquezr98-dev.github.io/web_project_coffeeshop" class="btn btn--secondary" target="_blank">Ver Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section__title">Contacto</h2>
+            <div class="contact__content">
+                <p>¿Te interesa colaborar o tienes alguna pregunta? No dudes en contactarme.</p>
+                <div class="contact__links">
+                    <a href="mailto:tu.correo@gmail.com" class="contact__link">
+                        📧 tu.correo@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/tu-linkedin/" class="contact__link" target="_blank">
+                        💼 LinkedIn
+                    </a>
+                    <a href="https://github.com/lvazquezr98-dev" class="contact__link" target="_blank">
+                        💻 GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Luis Reyes. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
