@@ -36,6 +36,7 @@ El LLM aparece en las capas **2 y 5**, nunca en la **3 ni la 4**.
 | `precios.py` | 4 | Llena `precios` con datos reales (yfinance), CSV, o sintéticos para demo. |
 | `query.py` | 4 | Consultas de análisis: ranking por PEG, evolución, posiciones propias. |
 | `aciertos.py` | 4 | Auditoría: rendimiento real a 30/90 días tras cada comprar/vender. |
+| `benchmark.py` | 4 | Prueba de fuego: alpha vs S&P 500 (¿batir al índice o no?). |
 | `ingest.py` | — | CLI que une las capas (`--from-json` sin API / `--transcripcion` con API). |
 | `fixtures/` | — | Extracción de ejemplo (video real) para probar sin gastar tokens. |
 
@@ -91,6 +92,14 @@ PY
 python3 aciertos.py asesor.db
 ```
 
+Benchmark contra el índice (¿bate al S&P 500?) — descarga también el índice:
+
+```bash
+python3 -c "import sqlite3, precios; \
+  precios.descargar(sqlite3.connect('asesor.db'), ['^GSPC'], '2025-01-01', '2026-06-01')"
+python3 benchmark.py asesor.db
+```
+
 Con API (extraer un video nuevo desde su transcripción):
 
 ```bash
@@ -118,5 +127,3 @@ python3 ingest.py --transcripcion video.txt --fecha 2026-05-25 --autor "Inversor
 - Capa 5: interfaz de consulta en lenguaje natural (el LLM lee solo el resultado
   ya filtrado del análisis y lo explica).
 - Automatización semanal (cron / GitHub Actions) para ingerir el video nuevo.
-- Benchmark: comparar la tasa de acierto del inversor contra el S&P 500 en el
-  mismo periodo (¿bate al índice o no?).
