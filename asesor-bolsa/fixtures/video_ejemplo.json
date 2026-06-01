@@ -1,0 +1,120 @@
+{
+  "fecha": "2026-05-25",
+  "autor": "Inversor (canal de bolsa)",
+  "titulo": "La nueva era de la IA: empresas beneficiadas por la adopción",
+  "url": "https://example.com/video-ia-adopcion",
+  "tesis_macro": "alcista",
+  "resumen": "Tras la fase de construcción de la IA (Nvidia/Palantir) viene la fase de ADOPCIÓN. Las ganadoras serán empresas que USEN la IA para ahorrar costes y subir márgenes, más la infraestructura (data centers, refrigeración, memorias, obleas). Marco de valoración: PEG ratio de Peter Lynch (<1 = barata).",
+  "temas_macro": ["adopción de IA", "ahorro de costes y márgenes", "infraestructura de data centers", "escasez de memorias RAM", "PEG ratio / valoración"],
+  "marketing_detectado": true,
+  "menciones": [
+    {
+      "ticker": "AMZN", "nombre_empresa": "Amazon", "mercado": "NASDAQ", "moneda": "USD",
+      "sector": "e-commerce / cloud", "tipo_mencion": "idea_activa", "enfasis": "deep_dive",
+      "postura": "comprar", "horizonte": "largo", "posicion_propia": true,
+      "per_estimado": 30.0, "crecimiento_eps_pct": 25.0, "peg_ratio": null,
+      "precio_objetivo": null, "precio_mencionado": 270.0, "confianza": "alta",
+      "argumento": "Cuatro vías: data centers, chip Trainium 3, participaciones en OpenAI/Anthropic y ahorro de costes en e-commerce.",
+      "cita_textual": "nos ha llevado a invertir las últimas semanas una cantidad importante en Amazon"
+    },
+    {
+      "ticker": "MOD", "nombre_empresa": "Modine Manufacturing", "mercado": "NYSE", "moneda": "USD",
+      "sector": "refrigeración data centers", "tipo_mencion": "idea_activa", "enfasis": "deep_dive",
+      "postura": "comprar", "horizonte": "medio", "posicion_propia": false,
+      "per_estimado": 38.0, "crecimiento_eps_pct": 65.0, "peg_ratio": 0.58,
+      "precio_objetivo": null, "precio_mencionado": null, "confianza": "media",
+      "argumento": "Refrigeración de data centers creciendo +87%; spin-off del negocio malo desbloquea valor.",
+      "cita_textual": "en el segmento de data centers están creciendo entre un 60 y un 80% la compañía"
+    },
+    {
+      "ticker": "3445.T", "nombre_empresa": "RS Technologies", "mercado": "TSE", "moneda": "JPY",
+      "sector": "obleas / semiconductores", "tipo_mencion": "idea_activa", "enfasis": "deep_dive",
+      "postura": "comprar", "horizonte": "largo", "posicion_propia": false,
+      "per_estimado": 3.0, "crecimiento_eps_pct": 22.0, "peg_ratio": 0.14,
+      "precio_objetivo": 9000.0, "precio_mencionado": 7400.0, "confianza": "alta",
+      "argumento": "Reciclaje de obleas; caja + participación en Grim ≈ capitalización, negocio operativo casi regalado.",
+      "cita_textual": "la valoración neta es de tres veces beneficios"
+    },
+    {
+      "ticker": "TSM", "nombre_empresa": "TSMC", "mercado": "NYSE", "moneda": "USD",
+      "sector": "fabricación de chips", "tipo_mencion": "idea_activa", "enfasis": "medio",
+      "postura": "comprar", "horizonte": "largo", "posicion_propia": false,
+      "per_estimado": 23.0, "crecimiento_eps_pct": 48.0, "peg_ratio": 0.48,
+      "precio_objetivo": null, "precio_mencionado": null, "confianza": "alta",
+      "argumento": "Fabricante líder, 'siempre gana'; barata por el miedo a Taiwán.",
+      "cita_textual": "es curioso que está solo a 23 veces beneficios, pero va a crecer el beneficio por acción al año que viene en 48"
+    },
+    {
+      "ticker": "GOOGL", "nombre_empresa": "Alphabet", "mercado": "NASDAQ", "moneda": "USD",
+      "sector": "software / publicidad", "tipo_mencion": "idea_activa", "enfasis": "medio",
+      "postura": "comprar", "horizonte": "largo", "posicion_propia": false,
+      "per_estimado": 27.0, "crecimiento_eps_pct": 31.0, "peg_ratio": 0.87,
+      "precio_objetivo": null, "precio_mencionado": null, "confianza": "alta",
+      "argumento": "PEG inferior a 1, valoración razonable pese a la narrativa de burbuja.",
+      "cita_textual": "si dividimos 27 entre 31 da aproximadamente 0,9. es menos de uno"
+    },
+    {
+      "ticker": "MU", "nombre_empresa": "Micron Technology", "mercado": "NASDAQ", "moneda": "USD",
+      "sector": "memorias RAM", "tipo_mencion": "idea_activa", "enfasis": "medio",
+      "postura": "comprar", "horizonte": "medio", "posicion_propia": false,
+      "per_estimado": 7.0, "crecimiento_eps_pct": 500.0, "peg_ratio": 0.1,
+      "precio_objetivo": null, "precio_mencionado": null, "confianza": "media",
+      "argumento": "Escasez de RAM, solo tres fabricantes; crecimiento enorme pero habrá que ver si se mantiene.",
+      "cita_textual": "el crecimiento de beneficios que van a tener los próximos 12 meses del 500%"
+    },
+    {
+      "ticker": "FIX", "nombre_empresa": "Comfort Systems USA", "mercado": "NYSE", "moneda": "USD",
+      "sector": "infraestructura IA", "tipo_mencion": "idea_activa", "enfasis": "medio",
+      "postura": "mantener", "horizonte": "largo", "posicion_propia": true,
+      "per_estimado": 43.0, "crecimiento_eps_pct": 49.0, "peg_ratio": 0.88,
+      "precio_objetivo": null, "precio_mencionado": 600.0, "confianza": "media",
+      "argumento": "Posición propia desde 120; construcción de infraestructura de IA.",
+      "cita_textual": "Confort Systems va a crecer a 12 meses vista un 49% y nos pide el mercado 43 veces beneficios"
+    },
+    {
+      "ticker": "META", "nombre_empresa": "Meta Platforms", "mercado": "NASDAQ", "moneda": "USD",
+      "sector": "software / publicidad", "tipo_mencion": "idea_activa", "enfasis": "pasajera",
+      "postura": "comprar", "horizonte": "medio", "posicion_propia": false,
+      "per_estimado": null, "crecimiento_eps_pct": null, "peg_ratio": null,
+      "precio_objetivo": null, "precio_mencionado": null, "confianza": "media",
+      "argumento": "Publicidad más eficiente con IA y ahorro por despidos de ingenieros.",
+      "cita_textual": "la IA está reemplazando a estos ingenieros y estas empresas también se van a beneficiar"
+    },
+    {
+      "ticker": "CRM", "nombre_empresa": "Salesforce", "mercado": "NYSE", "moneda": "USD",
+      "sector": "software", "tipo_mencion": "idea_activa", "enfasis": "pasajera",
+      "postura": "comprar", "horizonte": "medio", "posicion_propia": false,
+      "per_estimado": null, "crecimiento_eps_pct": null, "peg_ratio": null,
+      "precio_objetivo": null, "precio_mencionado": null, "confianza": "media",
+      "argumento": "Narrativa cambió: los ingresos se aceleran y los clientes dependen de instalar IA.",
+      "cita_textual": "ahora está cambiando estas semanas porque se está acelerando el ingreso"
+    },
+    {
+      "ticker": "NVDA", "nombre_empresa": "Nvidia", "mercado": "NASDAQ", "moneda": "USD",
+      "sector": "semiconductores", "tipo_mencion": "idea_activa", "enfasis": "medio",
+      "postura": "mantener", "horizonte": "medio", "posicion_propia": false,
+      "per_estimado": null, "crecimiento_eps_pct": null, "peg_ratio": null,
+      "precio_objetivo": null, "precio_mencionado": null, "confianza": "baja",
+      "argumento": "Cautela: competencia de Trainium y TPU empieza a erosionar su dominio.",
+      "cita_textual": "la gente ya está diciendo, Envidia es el pasado, esto es el futuro"
+    },
+    {
+      "ticker": "AAPL", "nombre_empresa": "Apple", "mercado": "NASDAQ", "moneda": "USD",
+      "sector": "tecnología", "tipo_mencion": "contexto_historico", "enfasis": "pasajera",
+      "postura": "mencion", "horizonte": null, "posicion_propia": false,
+      "per_estimado": null, "crecimiento_eps_pct": null, "peg_ratio": null,
+      "precio_objetivo": null, "precio_mencionado": null, "confianza": "baja",
+      "argumento": "Ejemplo histórico de la revolución móvil de 2007, no recomendación actual.",
+      "cita_textual": "Si pusiste 10,000 € en Apple al principio de la revolución móvil en el año 2007"
+    },
+    {
+      "ticker": "CSCO", "nombre_empresa": "Cisco Systems", "mercado": "NASDAQ", "moneda": "USD",
+      "sector": "infraestructura red", "tipo_mencion": "contexto_historico", "enfasis": "pasajera",
+      "postura": "mencion", "horizonte": null, "posicion_propia": false,
+      "per_estimado": null, "crecimiento_eps_pct": null, "peg_ratio": null,
+      "precio_objetivo": null, "precio_mencionado": null, "confianza": "baja",
+      "argumento": "Advertencia histórica: subió en la burbuja de internet y luego 25-30 años de rendimientos nulos.",
+      "cita_textual": "prácticamente 30 años o 25 años de rendimientos nulos en bolsa"
+    }
+  ]
+}

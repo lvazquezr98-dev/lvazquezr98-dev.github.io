@@ -1,0 +1,8 @@
+# Capa 2 (extracción) — solo necesarias para usar la API de Claude.
+anthropic>=0.92
+pydantic>=2
+
+# Capa 4 (precios reales, opcional) — para cruzar menciones con el mercado.
+# yfinance>=0.2
+
+# Las capas 3 (almacén) y 4 (consultas) usan solo la librería estándar (sqlite3).
