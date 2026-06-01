@@ -30,7 +30,14 @@ El LLM aparece en las capas **2 y 5**, nunca en la **3 ni la 4**.
 | Archivo | Capa | Qué es |
 |---|---|---|
 | `models.py` | 2 | Contrato de extracción (Pydantic). Lo que el LLM debe rellenar por video. |
+| `extract.py` | 2 | Llama a Claude con structured output y valida contra `models.py`. |
 | `schema.sql` | 3 | Esquema SQLite: `activos`, `videos`, `menciones`, `precios`. |
+| `store.py` | 3 | Inserta una extracción en SQLite (idempotente por `url`). |
+| `precios.py` | 4 | Llena `precios` con datos reales (yfinance), CSV, o sintéticos para demo. |
+| `query.py` | 4 | Consultas de análisis: ranking por PEG, evolución, posiciones propias. |
+| `aciertos.py` | 4 | Auditoría: rendimiento real a 30/90 días tras cada comprar/vender. |
+| `ingest.py` | — | CLI que une las capas (`--from-json` sin API / `--transcripcion` con API). |
+| `fixtures/` | — | Extracción de ejemplo (video real) para probar sin gastar tokens. |
 
 ## Modelo de datos
 
@@ -62,13 +69,40 @@ videos (1) ──< menciones >── (1) activos
 
 ## Puesta en marcha
 
+Sin API (prueba el almacén + análisis con el ejemplo incluido):
+
 ```bash
-sqlite3 asesor.db < schema.sql      # crea la base de datos vacía
+python3 ingest.py --from-json fixtures/video_ejemplo.json --db asesor.db
+python3 query.py asesor.db
 ```
 
-La extracción (capa 2) usa `models.py`: se pide al LLM que devuelva JSON conforme
-a `ExtraccionVideo.model_json_schema()` y se valida con
-`ExtraccionVideo.model_validate_json(...)`.
+Auditoría de aciertos (objetivo final) — necesita precios reales:
+
+```bash
+pip install yfinance        # capa 4a
+python3 - <<'PY'
+import sqlite3, precios
+conn = sqlite3.connect("asesor.db")
+tickers = [r[0] for r in conn.execute(
+  "SELECT DISTINCT ticker FROM menciones "
+  "WHERE tipo_mencion='idea_activa' AND postura IN ('comprar','vender')")]
+precios.descargar(conn, tickers, "2025-01-01", "2026-06-01")
+PY
+python3 aciertos.py asesor.db
+```
+
+Con API (extraer un video nuevo desde su transcripción):
+
+```bash
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY=...
+python3 ingest.py --transcripcion video.txt --fecha 2026-05-25 --autor "Inversor X"
+```
+
+> `precios.sintetico()` genera precios **ficticios** para probar la auditoría sin
+> red; las tasas de acierto que produce no significan nada. Para medir de verdad,
+> usa `precios.descargar()` (yfinance) sobre videos con fecha lo bastante antigua
+> como para tener 30–90 días de cotización posterior.
 
 ## Cómo resuelve los problemas habituales
 
@@ -80,7 +114,9 @@ a `ExtraccionVideo.model_json_schema()` y se valida con
 
 ## Siguientes pasos (no incluidos aún)
 
-- Capa 1: script de transcripción (faster-whisper / API).
-- Capa 2: cliente del LLM con structured output.
-- Capa 4: ingesta de precios (yfinance) y cálculo de aciertos.
-- Capa 5: interfaz de consulta.
+- Capa 1: script de transcripción (faster-whisper / API) que automatice video → texto.
+- Capa 5: interfaz de consulta en lenguaje natural (el LLM lee solo el resultado
+  ya filtrado del análisis y lo explica).
+- Automatización semanal (cron / GitHub Actions) para ingerir el video nuevo.
+- Benchmark: comparar la tasa de acierto del inversor contra el S&P 500 en el
+  mismo periodo (¿bate al índice o no?).
